@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>VariMint — per-variant bulk pricing for Printify sellers</title>
+<style>
+  :root { --ink:#10231c; --mint:#15b886; --mint-d:#0e9c72; --muted:#5b6b65; --bg:#f6fbf8; --card:#fff; --line:#e3ece8; }
+  * { box-sizing:border-box; } body { margin:0; font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); }
+  .wrap { max-width:760px; margin:0 auto; padding:56px 20px 80px; }
+  .badge { display:inline-block; font-size:13px; font-weight:600; color:var(--mint-d); background:#e6f7f0; border:1px solid #c5ead9; padding:4px 12px; border-radius:999px; }
+  h1 { font-size:40px; line-height:1.15; margin:18px 0 10px; letter-spacing:-.02em; }
+  h1 em { color:var(--mint-d); font-style:normal; }
+  .sub { font-size:19px; color:var(--muted); margin:0 0 28px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px 24px; margin:22px 0; }
+  .ba { display:grid; grid-template-columns:1fr 1fr; gap:14px; font-size:14px; }
+  .ba h4 { margin:0 0 8px; font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .row { display:flex; justify-content:space-between; padding:3px 0; border-bottom:1px dashed var(--line); }
+  .up { color:var(--mint-d); font-weight:600; }
+  ul.feat { list-style:none; padding:0; margin:0; }
+  ul.feat li { padding:8px 0 8px 28px; position:relative; }
+  ul.feat li:before { content:"✓"; position:absolute; left:0; color:var(--mint); font-weight:700; }
+  form { display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 6px; }
+  input[type=email] { flex:1; min-width:220px; padding:13px 14px; border:1px solid var(--line); border-radius:10px; font-size:16px; }
+  .btn { display:inline-block; background:var(--mint); color:#fff; border:0; border-radius:10px; padding:13px 22px; font-size:16px; font-weight:600; cursor:pointer; text-decoration:none; }
+  .btn:hover { background:var(--mint-d); }
+  .btn.alt { background:#102a20; }
+  .or { text-align:center; color:var(--muted); font-size:14px; margin:14px 0; }
+  .fine { color:var(--muted); font-size:13px; }
+  .price { font-weight:600; }
+  @media (max-width:560px){ h1{font-size:31px} .ba{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="badge">For Printify sellers · early access</span>
+  <h1>Set <em>different prices per variant</em> — in bulk.</h1>
+  <p class="sub">Printify's bulk tool prices every variant the same. VariMint applies size-based price
+  rules across your <strong>whole catalog in one pass</strong> — so 2XL+ finally costs what it should.</p>
+
+  <div class="card">
+    <div class="ba">
+      <div>
+        <h4>Today (one at a time)</h4>
+        <div class="row"><span>S / Black</span><span>$24.99</span></div>
+        <div class="row"><span>2XL / Black</span><span>$24.99</span></div>
+        <div class="row"><span>4XL / Black</span><span>$24.99</span></div>
+        <p class="fine">× 150 products, by hand 😩</p>
+      </div>
+      <div>
+        <h4>With VariMint (one click)</h4>
+        <div class="row"><span>S / Black</span><span>$24.99</span></div>
+        <div class="row"><span>2XL / Black</span><span class="up">$26.99</span></div>
+        <div class="row"><span>4XL / Black</span><span class="up">$30.99</span></div>
+        <p class="fine">rule: 2XL +$2 · 3XL +$4 · 4XL +$6 · across all listings</p>
+      </div>
+    </div>
+  </div>
+
+  <ul class="feat">
+    <li><strong>Per-variant rules:</strong> size → surcharge, or cost-plus margin per variant.</li>
+    <li><strong>Whole catalog at once</strong> — not one product at a time.</li>
+    <li><strong>Your own Printify token. Nothing leaves your browser.</strong> No account connection, no data middleman.</li>
+    <li>Gelato support next.</li>
+  </ul>
+
+  <div class="card">
+    <strong>Want it free?</strong> VariMint is launching free. Drop your email and I'll send the install link the moment it's live.
+    <form action="https://formspree.io/f/xykaojqg" method="POST">
+      <input type="hidden" name="_subject" value="New VariMint waitlist signup" />
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+      <input type="email" name="email" placeholder="you@email.com" required />
+      <button class="btn primary" type="submit">Get early access — free</button>
+    </form>
+    <p class="fine" style="margin-top:14px">Free to start. Early users get a say in which features ship next. Not affiliated with Printify.</p>
+  </div>
+
+  <p class="fine">Questions? <a href="mailto:getvarimint@gmail.com">getvarimint@gmail.com</a></p>
+</div>
+</body>
+</html>
